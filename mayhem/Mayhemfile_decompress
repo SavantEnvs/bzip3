@@ -1,0 +1,9 @@
+project: savantenvs/bzip3
+target: decompress
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/decompress/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_decompress
+    libfuzzer: true
+    timeout: 10
