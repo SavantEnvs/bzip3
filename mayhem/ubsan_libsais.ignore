@@ -1,0 +1,6 @@
+# libsais (included by libbz3.c) sets the sign bit as a flag and relies on signed wraparound.
+# Each check needs its own section: a "[a|b]" section does not take effect for these UBSan checks.
+[shift-base]
+src:*/libsais.h
+[signed-integer-overflow]
+src:*/libsais.h

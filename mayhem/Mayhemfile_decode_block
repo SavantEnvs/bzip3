@@ -1,0 +1,9 @@
+project: savantenvs/bzip3
+target: decode_block
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/decode_block/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_decode_block
+    libfuzzer: true
+    timeout: 10
